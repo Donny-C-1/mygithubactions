@@ -1,13 +1,13 @@
 <div style="text-align:center;">
 
-# Template Readme
-A template that contains all the basic formatting for a project. It is used for creating new repos without having to specify each thing once again. Its for basic repositories. Feel free to clone it or use it for your own open source projects.
+# Exploring Github actions
+This repository is used for testing and creating github workflows.
 
 [View Demo](google.com) |
 [Report bug](google.com) |
 [Request Feature](google.com)
 
-
+[![Super-Linter](https://github.com/Donny-C-1/mygithubactions/actions/workflows/code_linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ![Static Badge](https://img.shields.io/badge/Project_Name-Project_Template-%233CB371?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/status-development-dodgerblue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/version-1.0-%233CB371?style=for-the-badge)
@@ -15,12 +15,9 @@ A template that contains all the basic formatting for a project. It is used for 
 
 
 
-## ⭐ Features 
-Note that features should be things that already exist in the project not things you want to add.
-- Feature number 1
-- Feature number 2
-- Feature number 3
-
+## ⭐ Actions
+- Code Linter
+- Github Actions Demo
 
 
 
@@ -28,22 +25,16 @@ Note that features should be things that already exist in the project not things
 ## 🚀 Getting Started
 To check out the application, you can view the live demo right here or follow the instructions below to setup the application on your local device.
 
-### 📋 Requirements
-1. Nodejs
 
 ### ⚙️ Installation
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/Donny-C-1/<repo_name>.git
+git clone https://github.com/Donny-C-1/mygithubactions.git
 ```
 2. Navigate to the project directory
 ```sh
-cd <repo_name>
-```
-3. Install the required dependencies:
-```sh
-npm install
+cd mygithubactions
 ```
 
 ### ⚡ Usage
@@ -56,10 +47,6 @@ npm start
 ## 📄 License 
 
 This project is licensed under the Apache License v2. See the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
 ## 📱 Contact
 
