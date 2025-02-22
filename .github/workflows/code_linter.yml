@@ -1,0 +1,14 @@
+on: push
+
+jobs:
+    Lint-The-Code:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout the repository code
+              uses: actions/checkout@v4
+
+            - name: Lint the code
+              uses: super-linter/super-linter@7.2.1
+              env:
+                VALIDATE_JAVASCRIPT_PRETTIER: true
