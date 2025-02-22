@@ -7,7 +7,7 @@ This repository is used for testing and creating github workflows.
 [Report bug](google.com) |
 [Request Feature](google.com)
 
-[![Super-Linter](https://github.com/Donny-C-1/mygithubactions/actions/workflows/code_linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![Super-Linter](https://github.com/Donny-C-1/mygithubactions/actions/workflows/code_linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ![Static Badge](https://img.shields.io/badge/Project_Name-Project_Template-%233CB371?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/status-development-dodgerblue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/version-1.0-%233CB371?style=for-the-badge)

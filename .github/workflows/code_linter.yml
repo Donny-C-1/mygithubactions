@@ -12,10 +12,18 @@ jobs:
             - name: Checkout the repository code
               uses: actions/checkout@v4
               with:
-                fetch-depth: 0
+                  fetch-depth: 0
 
             - name: Lint the code
               uses: super-linter/super-linter@v7.2.1
               env:
-                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-                VALIDATE_JAVASCRIPT_PRETTIER: true
+                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+                  VALIDATE_JAVASCRIPT_PRETTIER: true
+
+            - name: Create Pull Request if Lint Passes
+              if: success()
+              run: echo "Lint ran successfully"
+
+            - name: Comment when Lint fails
+              if: failure()
+              run: echo "Lint failed"
