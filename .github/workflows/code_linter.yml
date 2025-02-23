@@ -22,7 +22,7 @@ jobs:
 
             - name: Create Pull Request if Lint Passes
               if: success()
-              run: echo "Lint ran successfully"
+              uses: peter-evans/create-pull-request@v7
 
             - name: Comment when Lint fails
               if: failure()
