@@ -19,12 +19,8 @@ This repository is used for testing and creating github workflows.
 - Code Linter
 - Github Actions Demo
 
-
-
-
 ## 🚀 Getting Started
 To check out the application, you can view the live demo right here or follow the instructions below to setup the application on your local device.
-
 
 ### ⚙️ Installation
 
@@ -38,7 +34,7 @@ cd mygithubactions
 ```
 
 ### ⚡ Usage
-To start the webapp, simply naviagte to the folder and run the script on the command line
+To make use of any actions specified here simply open the workflows folder and copy the file
 ```sh
 cd "<repo_name"
 npm start
