@@ -22,10 +22,6 @@ jobs:
                   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
                   VALIDATE_JAVASCRIPT_PRETTIER: true
 
-            - name: Clean the repo
-              if: success()
-              run: git clean -fdx
-              
             - name: Create Pull Request if Lint Passes
               if: success()
               uses: peter-evans/create-pull-request@v7
