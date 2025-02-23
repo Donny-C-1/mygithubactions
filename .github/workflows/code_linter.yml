@@ -24,15 +24,9 @@ jobs:
 
             - name: Create Pull Request if Lint Passes
               if: success()
-              uses: peter-evans/create-pull-request@v7
-              with:
-                token: ${{secrets.GITHUB_TOKEN}}
-                branch: dev
-                title: Merge Dev into Main
-                body: "Automated PR: Dev branch passed lint checks and is ready to merge"
-                labels: automation, lint-passed
-                base: main-branch
-                delete-branch: false
+              run: gh pr create -B main-branch -H dev --title "Merge dev into main-branch" --body "Created by Github Action"
+              env:
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
             - name: Comment when Lint fails
               if: failure()
