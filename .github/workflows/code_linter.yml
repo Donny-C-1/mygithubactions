@@ -26,6 +26,7 @@ jobs:
               if: success()
               uses: peter-evans/create-pull-request@v7
               with:
+                token: ${{secrets.GITHUB_TOKEN}}
                 branch: dev
                 title: Merge Dev into Main
                 body: "Automated PR: Dev branch passed lint checks and is ready to merge"
