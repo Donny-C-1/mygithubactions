@@ -3,14 +3,13 @@
 # Exploring Github actions
 This repository is used for testing and creating github workflows.
 
-[View Demo](google.com) |
 [Report bug](google.com) |
 [Request Feature](google.com)
 
-[![Super-Linter](https://github.com/Donny-C-1/mygithubactions/actions/workflows/code_linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
-![Static Badge](https://img.shields.io/badge/Project_Name-Project_Template-%233CB371?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/status-development-dodgerblue?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/version-1.0-%233CB371?style=for-the-badge)
+[![Super-Linter](https://github.com/Donny-C-1/mygithubactions/actions/workflows/code_linter.yml/badge.svg?style=for-the-badge)](https://github.com/marketplace/actions/super-linter)
+![Static Badge](https://img.shields.io/badge/Project_Name-Exploring_Github_Actions-%233CB371)
+![Static Badge](https://img.shields.io/badge/status-development-dodgerblue)
+![Static Badge](https://img.shields.io/badge/version-1.0-%233CB371)
 </div>
 
 
@@ -19,30 +18,15 @@ This repository is used for testing and creating github workflows.
 - Code Linter
 - Github Actions Demo
 
+### Code Linter
+This action triggers on a push to the dev branch. It checks the codebase for proper formatting and if successful will trigger a pull request.
 
-
-
-## 🚀 Getting Started
-To check out the application, you can view the live demo right here or follow the instructions below to setup the application on your local device.
-
-
-### ⚙️ Installation
-
-1. Clone the repository:
-```sh
-git clone https://github.com/Donny-C-1/mygithubactions.git
-```
-2. Navigate to the project directory
-```sh
-cd mygithubactions
-```
+### Github Actions Demo
+This action triggers on push to the main-branch branch. It simply echo some basic information. This is used to test that actions work successfully.
 
 ### ⚡ Usage
-To start the webapp, simply naviagte to the folder and run the script on the command line
-```sh
-cd "<repo_name"
-npm start
-```
+To make use of any actions specified here simply open the workflows folder and copy the file
+
 
 ## 📄 License 
 
