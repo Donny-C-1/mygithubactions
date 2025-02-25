@@ -1,7 +1,7 @@
 {
   "name": "actions",
   "version": "1.0.0",
-  "description": "<div style=\"text-align:center;\">",
+  "description": "This repository is used for testing and creating github workflows.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
