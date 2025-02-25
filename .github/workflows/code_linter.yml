@@ -5,6 +5,7 @@ run-name: Check code for proper formatting
 on: 
     push:
         branches: dev
+    workflow_dispatch:
 
 jobs:
     Lint-The-Code:
