@@ -10,7 +10,7 @@ jobs:
   Assign:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -20,20 +20,20 @@ jobs:
 
             if (commentBody.includes('!take')) {
               if (issue.assignees.length === 0) {
-                await github.rest.issues.addAssignees({
+                await octokit.rest.issues.addAssignees({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   assignees: [commenter]
                 });
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   body: `Issue assigned to @${commenter}!`
                 });
               } else {
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
@@ -42,27 +42,27 @@ jobs:
               }
             } else if (commentBody.includes('!support')) {
               if (issue.assignees.length > 0 && !issue.assignees.some(assignee => assignee.login === commenter)) {
-                await github.rest.issues.addAssignees({
+                await octokit.rest.issues.addAssignees({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   assignees: [commenter] // Add the supporter as an assignee
                 });
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   body: `@${commenter} is now supporting this issue.`
                 });
               } else if (issue.assignees.some(assignee => assignee.login === commenter)){
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   body: `@${commenter} is already assigned to this issue.`
                 });
               } else {
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
@@ -71,20 +71,20 @@ jobs:
               }
             } else if (commentBody.includes('!drop')) {
               if (issue.assignees.some(assignee => assignee.login === commenter)) {
-                await github.rest.issues.removeAssignees({
+                await octokit.rest.issues.removeAssignees({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   assignees: [commenter]
                 });
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   body: `@${commenter} has dropped the issue.`
                 });
               } else {
-                await github.rest.issues.createComment({
+                await octokit.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
